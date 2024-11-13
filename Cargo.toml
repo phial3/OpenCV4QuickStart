@@ -2,13 +2,13 @@
 name = "OpenCV4WithRust"
 version = "0.1.0"
 edition = "2021"
-resolver = "2"
 
 [[bin]]
 name = "main"
 path = "src/main.rs"
 
 [workspace]
+resolver = "2"
 members = [
     "chapter1"
 ]
