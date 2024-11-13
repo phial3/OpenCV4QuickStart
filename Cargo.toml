@@ -10,5 +10,6 @@ path = "src/main.rs"
 [workspace]
 resolver = "2"
 members = [
-    "chapter1"
+    "chapter1",
+    "chapter2"
 ]
