@@ -11,5 +11,6 @@ path = "src/main.rs"
 resolver = "2"
 members = [
     "chapter1",
-    "chapter2"
+    "chapter2",
+    "chapter3"
 ]
