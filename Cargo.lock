@@ -344,6 +344,18 @@ dependencies = [
 ]
 
 [[package]]
+name = "chapter4"
+version = "0.1.0"
+dependencies = [
+ "anyhow",
+ "async-task",
+ "image",
+ "opencv",
+ "rayon",
+ "smol",
+]
+
+[[package]]
 name = "clang"
 version = "2.0.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
