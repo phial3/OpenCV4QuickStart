@@ -13,6 +13,7 @@ mod plot;
 mod pyramid;
 mod split_and_merge;
 mod threshold;
+mod wrap_affine;
 
 fn main() {
     // 1. image concat
@@ -58,5 +59,8 @@ fn main() {
     // let _ = split_and_merge::run();
 
     // 15. threshold
-    let _ = threshold::run();
+    // let _ = threshold::run();
+
+    // 16. wrap affine
+    let _ = wrap_affine::run();
 }
