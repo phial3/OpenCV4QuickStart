@@ -1,3 +1,5 @@
+extern crate core;
+
 mod create_track_bar;
 mod cv_color;
 mod deep_shadow_copy;
@@ -13,7 +15,8 @@ mod plot;
 mod pyramid;
 mod split_and_merge;
 mod threshold;
-mod wrap_affine;
+mod warp_affine;
+mod warp_perspective;
 
 fn main() {
     // 1. image concat
@@ -62,5 +65,8 @@ fn main() {
     // let _ = threshold::run();
 
     // 16. wrap affine
-    let _ = wrap_affine::run();
+    // let _ = warp_affine::run();
+
+    // 17. warp perspective
+    let _ = warp_perspective::run();
 }
