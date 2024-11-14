@@ -1,7 +1,6 @@
 use anyhow::{Result, Error, Context};
 use opencv::{
     core::{Point, Point2f, Rect, Scalar, Size, Size2f, Vector},
-    imgcodecs,
     imgproc,
     highgui,
     prelude::*,
