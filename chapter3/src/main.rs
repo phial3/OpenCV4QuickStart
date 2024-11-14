@@ -1,14 +1,16 @@
-mod image_concat;
 mod create_track_bar;
 mod cv_color;
 mod deep_shadow_copy;
+mod image_concat;
 mod image_flip;
 mod image_lut;
+mod image_resize;
 mod logic_operation;
 mod max_and_min;
 mod mean_and_mean_std_dev;
 mod mouse_event;
 mod plot;
+mod pyramid;
 
 fn main() {
     // 1. image concat
@@ -42,5 +44,11 @@ fn main() {
     // let _ = mouse_event::run();
 
     // 11. plot
-    let _ = plot::run();
+    // let _ = plot::run();
+
+    // 12. pyramid
+    // let _ = pyramid::run();
+
+    // 13. image resize
+    let _ = image_resize::run();
 }
