@@ -8,6 +8,7 @@ mod logic_operation;
 mod max_and_min;
 mod mean_and_mean_std_dev;
 mod mouse_event;
+mod polt;
 
 fn main() {
     // 1. image concat
@@ -38,5 +39,8 @@ fn main() {
     // let _ = mean_and_mean_std_dev::run();
 
     // 10. mouse event
-    let _ = mouse_event::run();
+    // let _ = mouse_event::run();
+
+    // 11. polt
+    let _ = polt::run();
 }

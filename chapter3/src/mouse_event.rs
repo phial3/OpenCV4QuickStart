@@ -103,7 +103,10 @@ pub(crate) fn run() -> Result<()> {
 
     // 显示初始图像
     {
-        let state_guard = state.lock()?;
+        // NOTE：这里的 unwrap() 不能替换为 ? 运算符，因为下面原因：
+        // 这个错误是由于 DrawState 没有实现 Send trait，导致 MutexGuard 不能在线程间安全传递。
+        // 我们需要修改错误处理的方式，使用 unwrap() 或者显式处理 PoisonError
+        let state_guard = state.lock().unwrap();
         highgui::imshow("图像窗口 1", &state_guard.img)?;
         highgui::imshow("图像窗口 2", &state_guard.img_point)?;
     }
@@ -115,6 +118,8 @@ pub(crate) fn run() -> Result<()> {
             if let Err(e) = state_guard.handle_mouse_event(event, x, y, flags) {
                 eprintln!("Error handling mouse event: {}", e);
             }
+        } else {
+            eprintln!("Failed to acquire lock");
         }
     };
 
