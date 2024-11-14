@@ -39,8 +39,8 @@ impl ImageProcessor {
         ).expect("调整亮度失败");
     }
 
-    fn display_image(&self) {
-        highgui::imshow("滑动条改变图像亮度", &self.processed_image).expect("显示图像失败");
+    fn display_image(&self, win_name: &str) {
+        highgui::imshow(win_name, &self.processed_image).expect("显示图像失败");
     }
 }
 
@@ -64,7 +64,7 @@ pub(crate) fn run() -> Result<()> {
             let mut guard = processor_clone.lock().unwrap();
             guard.brightness = value;
             guard.update_brightness();
-            guard.display_image();
+            guard.display_image(window_name);
         })
     };
 
