@@ -5,6 +5,7 @@ mod deep_shadow_copy;
 mod image_flip;
 mod image_lut;
 mod logic_operation;
+mod max_and_min;
 
 fn main() {
     // 1. image concat
@@ -26,5 +27,8 @@ fn main() {
     // let _ = image_lut::run();
 
     // 7. logic operation
-    let _ = logic_operation::run();
+    // let _ = logic_operation::run();
+
+    // 8. max and min
+    let _ = max_and_min::run();
 }
