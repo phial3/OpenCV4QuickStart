@@ -4,6 +4,7 @@ mod cv_color;
 mod deep_shadow_copy;
 mod image_flip;
 mod image_lut;
+mod logic_operation;
 
 fn main() {
     // 1. image concat
@@ -22,5 +23,8 @@ fn main() {
     // let _ = image_flip::run();
 
     // 6. image lut
-    let _ = image_lut::run();
+    // let _ = image_lut::run();
+
+    // 7. logic operation
+    let _ = logic_operation::run();
 }

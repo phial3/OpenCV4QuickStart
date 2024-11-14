@@ -1,12 +1,11 @@
 use anyhow::{Result, Error, Context};
 use opencv::{
-    core::{Mat},
+    core::{Mat, Vector},
     imgcodecs,
     imgproc,
     highgui,
     prelude::*,
 };
-use opencv::core::Vector;
 
 const BASE_PATH: &str = "../data/chapter3/";
 
