@@ -15,8 +15,10 @@ mod plot;
 mod pyramid;
 mod split_and_merge;
 mod threshold;
+mod warp_polar;
 mod warp_affine;
 mod warp_perspective;
+mod find_min_and_max;
 
 fn main() {
     // 1. image concat
@@ -68,5 +70,11 @@ fn main() {
     // let _ = warp_affine::run();
 
     // 17. warp perspective
-    let _ = warp_perspective::run();
+    // let _ = warp_perspective::run();
+
+    // 18. find min and max
+    // let _ = find_min_and_max::run();
+
+    // 19. warp polar
+    let _ = warp_polar::run();
 }
