@@ -1,3 +1,8 @@
+mod cal_hist;
+
 fn main() {
-    println!("Hello, world!");
+    // 1. cal_hist
+    let _ = cal_hist::run();
+
 }
+
