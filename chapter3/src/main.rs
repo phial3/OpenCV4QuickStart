@@ -7,6 +7,7 @@ mod image_lut;
 mod logic_operation;
 mod max_and_min;
 mod mean_and_mean_std_dev;
+mod mouse_event;
 
 fn main() {
     // 1. image concat
@@ -34,5 +35,8 @@ fn main() {
     // let _ = max_and_min::run();
 
     // 9. mean and mear std dev
-    let _ = mean_and_mean_std_dev::run();
+    // let _ = mean_and_mean_std_dev::run();
+
+    // 10. mouse event
+    let _ = mouse_event::run();
 }
