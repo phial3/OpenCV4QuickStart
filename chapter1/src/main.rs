@@ -9,9 +9,7 @@ fn main() -> Result<()> {
     // image_read_write();
 
     // 2. 图像透明度
-    unsafe {
-        image_alpha()?;
-    }
+    image_alpha()?;
 
     Ok(())
 }
@@ -49,8 +47,8 @@ fn image_read_write() -> Result<()> {
 }
 
 // 图像透明度
-unsafe fn image_alpha() -> Result<()> {
-    let mut image = Mat::new_rows_cols(480, 640, opencv::core::CV_8UC4)?;
+fn image_alpha() -> Result<()> {
+    let mut image = unsafe { Mat::new_rows_cols(480, 640, opencv::core::CV_8UC4)? };
     alpha_mat(&mut image).expect("alpha_mat failed.");
 
     let mut compression_params = Vector::new();
