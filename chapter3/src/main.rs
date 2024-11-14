@@ -11,6 +11,8 @@ mod mean_and_mean_std_dev;
 mod mouse_event;
 mod plot;
 mod pyramid;
+mod split_and_merge;
+mod threshold;
 
 fn main() {
     // 1. image concat
@@ -50,5 +52,11 @@ fn main() {
     // let _ = pyramid::run();
 
     // 13. image resize
-    let _ = image_resize::run();
+    // let _ = image_resize::run();
+
+    // 14. split and merge
+    // let _ = split_and_merge::run();
+
+    // 15. threshold
+    let _ = threshold::run();
 }
