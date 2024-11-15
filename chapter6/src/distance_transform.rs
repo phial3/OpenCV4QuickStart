@@ -1,6 +1,5 @@
 
 use anyhow::{Result, Error, Context};
-use image::open;
 use opencv::{
     prelude::*,
     core::{Mat, Size, Rect, Point, RNG, Vec3b, Scalar, Vector},
@@ -8,7 +7,6 @@ use opencv::{
     imgproc,
     highgui,
 };
-use opencv::imgproc::DistanceTypes;
 
 const BASE_PATH: &str = "../data/chapter6/";
 

@@ -2,6 +2,7 @@ mod connected_components;
 mod connected_components_with_stats;
 mod dilate;
 mod distance_transform;
+mod erode;
 
 fn main() {
     // 1. connected components
@@ -14,5 +15,8 @@ fn main() {
     // let _= dilate::run();
 
     // 4. distance transform
-    let _= distance_transform::run();
+    // let _= distance_transform::run();
+
+    // 5. erode
+    let _= erode::run();
 }
