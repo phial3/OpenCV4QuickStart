@@ -12,6 +12,7 @@ mod median_blur;
 mod salt_and_pepper;
 mod scharr;
 mod sobel;
+mod self_filter;
 
 fn main() {
     // 1. bilateral filter
@@ -54,5 +55,8 @@ fn main() {
     // let _ = scharr::run();
 
     // 14. sobel
-    let _ = sobel::run();
+    // let _ = sobel::run();
+
+    // 15. self filter
+    let _ = self_filter::run();
 }
