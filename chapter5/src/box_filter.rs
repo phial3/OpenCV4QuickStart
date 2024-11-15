@@ -40,11 +40,11 @@ pub(crate) fn run() -> Result<()> {
     let mut equal_lena_32f_sqr = Mat::default();
 
     // 进行 boxFilter 和 sqrBoxFilter 滤波, border_type=4, BorderTypes::BORDER_DEFAULT
-    imgproc::box_filter(&equal_lena, &mut result_norm, -1, Size::new(3, 3), Point::new(-1, -1), true, 4)?;
-    imgproc::box_filter(&equal_lena, &mut result, -1, Size::new(3, 3), Point::new(-1, -1), false, 4)?;
+    imgproc::box_filter(&equal_lena, &mut result_norm, -1, Size::new(3, 3), Point::new(-1, -1), true, 4)?;  //进行归一化
+    imgproc::box_filter(&equal_lena, &mut result, -1, Size::new(3, 3), Point::new(-1, -1), false, 4)?;      //不进行归一化
 
-    imgproc::sqr_box_filter(&data, &mut data_sqr_norm, -1, Size::new(3, 3), Point::new(-1, -1), true, 4)?;
-    imgproc::sqr_box_filter(&data, &mut data_sqr, -1, Size::new(3, 3), Point::new(-1, -1), false, 4)?;
+    imgproc::sqr_box_filter(&data, &mut data_sqr_norm, -1, Size::new(3, 3), Point::new(-1, -1), true, 4)?;  //进行归一化
+    imgproc::sqr_box_filter(&data, &mut data_sqr, -1, Size::new(3, 3), Point::new(-1, -1), false, 4)?;      //不进行归一化
 
     imgproc::sqr_box_filter(&equal_lena_32f, &mut equal_lena_32f_sqr, -1, Size::new(3, 3), Point::new(-1, -1), true, 4)?;
 
