@@ -2,6 +2,7 @@ mod bilateral_filter;
 mod image_blur;
 mod box_filter;
 mod canny;
+mod edge;
 
 fn main() {
     // 1. bilateral filter
@@ -14,5 +15,8 @@ fn main() {
     // let _ = box_filter::run();
 
     // 4. canny edge detector
-    let _ = canny::run();
+    // let _ = canny::run();
+
+    // 5. edge detection
+    let _ = edge::run();
 }
