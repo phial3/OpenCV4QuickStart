@@ -11,8 +11,8 @@ const BASE_PATH: &str = "../data/chapter5/";
 
 pub(crate) fn run() -> Result<()> {
     // 读取含有人脸的两张图像
-    let img1 = imgcodecs::imread(&(BASE_PATH.to_owned() + "face1.png"), 1)?;
-    let img2 = imgcodecs::imread(&(BASE_PATH.to_owned() + "face2.png"), 1)?;
+    let img1 = imgcodecs::imread(&(BASE_PATH.to_owned() + "face1.png"), imgcodecs::IMREAD_COLOR)?;
+    let img2 = imgcodecs::imread(&(BASE_PATH.to_owned() + "face2.png"), imgcodecs::IMREAD_COLOR)?;
 
     if img1.empty() || img2.empty() {
         println!("请确认图像文件名称是否正确");
