@@ -1,3 +1,6 @@
+mod connected_components;
+
 fn main() {
-    println!("Hello, world!");
+    // 1. connected components
+    let _= connected_components::run();
 }
