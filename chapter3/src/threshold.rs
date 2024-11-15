@@ -14,8 +14,7 @@ pub(crate) fn run() -> Result<()> {
     let img = imgcodecs::imread(&format!("{}lena.png", BASE_PATH), imgcodecs::IMREAD_COLOR)?;
     let img_thr = imgcodecs::imread(&format!("{}threshold.png", BASE_PATH), imgcodecs::IMREAD_GRAYSCALE)?;
     if img.empty() || img_thr.empty() {
-        println!("请确认图像文件名称是否正确");
-        return Ok(());
+        panic!("请确认图像文件名称是否正确");
     }
 
     // 灰度化

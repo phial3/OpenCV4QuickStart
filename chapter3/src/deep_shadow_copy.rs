@@ -13,10 +13,8 @@ pub(crate) fn run() -> Result<()> {
     // 读取图像
     let mut img = imgcodecs::imread(&(BASE_PATH.to_string() + "lena.png"), imgcodecs::IMREAD_COLOR)?;
     let noobcv = imgcodecs::imread(&(BASE_PATH.to_string() + "noobcv.jpg"), imgcodecs::IMREAD_COLOR)?;
-
     if img.empty() || noobcv.empty() {
-        println!("请确认图像文件名称是否正确");
-        return Ok(());
+        panic!("请确认图像文件名称是否正确");
     }
 
     // 定义图像变量

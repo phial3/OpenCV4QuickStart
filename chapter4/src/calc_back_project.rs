@@ -13,11 +13,10 @@ pub(crate) fn run() -> Result<()> {
     // Load images
     let img = imgcodecs::imread(&(BASE_PATH.to_owned() + "apple.jpg"), imgcodecs::IMREAD_COLOR)?;
     let sub_img = imgcodecs::imread(&(BASE_PATH.to_owned() + "sub_apple.jpg"), imgcodecs::IMREAD_COLOR)?;
-
     if img.empty() || sub_img.empty() {
-        println!("请确认图像文件名称是否正确");
-        return Ok(());
+        panic!("请确认图像文件名称是否正确");
     }
+
     println!("img 图像尺寸: {:?}", img.size());
     println!("sub_img 图像尺寸: {:?}", sub_img.size());
 

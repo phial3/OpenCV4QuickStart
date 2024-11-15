@@ -5,6 +5,7 @@ mod canny;
 mod edge;
 mod filter;
 mod gauss_noise;
+mod gaussian_blur;
 
 fn main() {
     // 1. bilateral filter
@@ -26,5 +27,8 @@ fn main() {
     // let _ = filter::run();
 
     // 7. gaussian noise
-    let _ = gauss_noise::run();
+    // let _ = gauss_noise::run();
+
+    // 8. gaussian blur
+    let _ = gaussian_blur::run();
 }

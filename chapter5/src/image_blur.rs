@@ -17,8 +17,7 @@ pub(crate) fn run() -> Result<()> {
 
     // 确保图像读取成功
     if equal_lena.empty() || equal_lena_gauss.empty() || equal_lena_salt.empty() {
-        println!("请确认图像文件名称是否正确");
-        return Ok(());
+        panic!("请确认图像文件名称是否正确");
     }
 
     let mut result_3 = Mat::default();

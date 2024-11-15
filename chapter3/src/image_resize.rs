@@ -13,8 +13,7 @@ pub(crate) fn run() -> Result<()> {
     // 读取灰度图像
     let gray_img = imgcodecs::imread(&format!("{}lena.png", BASE_PATH), imgcodecs::IMREAD_COLOR)?;
     if gray_img.empty() {
-        println!("请确认图像文件名称是否正确");
-        return Ok(());
+        panic!("请确认图像文件名称是否正确");
     }
 
     let mut small_img = Mat::default();

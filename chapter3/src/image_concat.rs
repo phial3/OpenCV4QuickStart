@@ -47,8 +47,7 @@ pub(crate) fn run() -> Result<()> {
     let img11 = imgcodecs::imread(&format!("{}lena11.jpg", BASE_PATH), imgcodecs::IMREAD_COLOR)?;
 
     if img00.empty() || img01.empty() || img10.empty() || img11.empty() {
-        println!("请确认图像文件名称是否正确");
-        return Ok(());
+        panic!("请确认图像文件名称是否正确");
     }
 
     // 显示4个子图像

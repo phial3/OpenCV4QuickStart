@@ -13,8 +13,7 @@ pub(crate) fn run() -> Result<()> {
     // 读取图像
     let img = imgcodecs::imread(&format!("{}noobcvqr.png", BASE_PATH), imgcodecs::IMREAD_COLOR)?;
     if img.empty() {
-        println!("请确认图像文件名称是否正确");
-        return Ok(());
+        panic!("请确认图像文件名称是否正确");
     }
 
     // 定义源点和目标点的数组

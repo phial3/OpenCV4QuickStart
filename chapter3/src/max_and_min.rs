@@ -36,10 +36,8 @@ pub(crate) fn run() -> Result<()> {
     // 读取彩色图像并进行比较运算
     let img0 = imgcodecs::imread(&(BASE_PATH.to_string() + "lena.png"), imgcodecs::IMREAD_COLOR)?;
     let img1 = imgcodecs::imread(&(BASE_PATH.to_string() + "noobcv.jpg"), imgcodecs::IMREAD_COLOR)?;
-
     if img0.empty() || img1.empty() {
-        println!("请确认图像文件名称是否正确");
-        return Ok(());
+        panic!("请确认图像文件名称是否正确");
     }
 
     let mut com_min = Mat::default();

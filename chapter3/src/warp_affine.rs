@@ -14,8 +14,7 @@ pub(crate) fn run() -> Result<()> {
     // 读取图像
     let img = imgcodecs::imread(&format!("{}lena.png", BASE_PATH), imgcodecs::IMREAD_COLOR)?;
     if img.empty() {
-        println!("请确认图像文件名称是否正确");
-        return Ok(());
+        panic!("请确认图像文件名称是否正确");
     }
 
     let mut rotation0 = Mat::default();

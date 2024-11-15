@@ -13,8 +13,7 @@ pub(crate) fn run() -> Result<()> {
     let lena = imgcodecs::imread(&format!("{}{}", BASE_PATH, "lena.png"), imgcodecs::IMREAD_COLOR)?;
     let equal_lena = imgcodecs::imread(&format!("{}{}", BASE_PATH, "equalLena.png"), imgcodecs::IMREAD_ANYDEPTH)?;
     if lena.empty() || equal_lena.empty() {
-        println!("请确认图像文件名称是否正确");
-        return Ok(());
+        panic!("请确认图像文件名称是否正确");
     }
 
     // 生成与原图像同尺寸、数据类型和通道数的矩阵

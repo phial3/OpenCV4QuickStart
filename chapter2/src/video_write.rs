@@ -16,10 +16,8 @@ pub(crate) fn run() -> Result<()> {
     // 获取第一帧图像，检查视频流
     let mut img = Mat::default();
     capture.read(&mut img)?;
-
     if img.empty() {
-        println!("没有获取到图像");
-        return Ok(());
+        panic!("没有获取到图像");
     }
 
     // 判断相机（视频）是否为彩色图像
@@ -33,8 +31,7 @@ pub(crate) fn run() -> Result<()> {
     let mut writer = videoio::VideoWriter::new(filename, codec, fps, img.size()?, is_color)?;
     // 判断视频流是否创建成功
     if !writer.is_opened()? {
-        println!("打开视频文件失败，请确实是否为合法输入");
-        return Ok(());
+        panic!("打开视频文件失败，请确实是否为合法输入");
     }
 
     // 循环读取视频流并保存
