@@ -8,6 +8,7 @@ mod gauss_noise;
 mod gaussian_blur;
 mod get_deriv_kernels;
 mod laplacian;
+mod median_blur;
 
 fn main() {
     // 1. bilateral filter
@@ -38,5 +39,8 @@ fn main() {
     // let _ = get_deriv_kernels::run();
 
     // 10. laplacian
-    let _ = laplacian::run();
+    // let _ = laplacian::run();
+
+    // 11. median blur
+    let _ = median_blur::run();
 }
