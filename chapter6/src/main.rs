@@ -4,6 +4,7 @@ mod dilate;
 mod distance_transform;
 mod erode;
 mod morphology_app;
+mod thinning;
 
 fn main() {
     // 1. connected components
@@ -22,5 +23,8 @@ fn main() {
     // let _= erode::run();
 
     // 6. morphology app
-    let _= morphology_app::run();
+    // let _= morphology_app::run();
+
+    // 7. thinning
+    let _= thinning::run();
 }

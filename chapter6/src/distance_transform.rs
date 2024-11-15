@@ -41,8 +41,7 @@ pub(crate) fn run() -> Result<()> {
     // 对图像进行距离变换
     let rice = imgcodecs::imread(&format!("{}{}", BASE_PATH, "rice.png"), imgcodecs::IMREAD_GRAYSCALE)?;
     if rice.empty() {
-        println!("请确认图像文件名称是否正确");
-        return Ok(());
+        panic!("请确认图像文件名称是否正确");
     }
     let mut rice_bw = Mat::default();
     let mut rice_bw_inv = Mat::default();

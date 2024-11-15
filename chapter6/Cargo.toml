@@ -12,12 +12,16 @@ rand = "0.8"
 async-task = "4.7"
 opencv = { version = "0.93", default-features = false, features = [
     "dnn",
+    "fuzzy",
+    "video",
     "videoio",
     "highgui",
     "imgproc",
+    "ximgproc",
     "imgcodecs",
     "features2d",
     "objdetect",
+    "xobjdetect",
     "tracking",
     "stitching",
     "clang-runtime",
