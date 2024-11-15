@@ -1,3 +1,7 @@
+mod bilateral_filter;
+
+
 fn main() {
-    println!("Hello, world!");
+    // 1. bilateral filter
+    let _ = bilateral_filter::run();
 }

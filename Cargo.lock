@@ -374,6 +374,14 @@ dependencies = [
 [[package]]
 name = "chapter5"
 version = "0.1.0"
+dependencies = [
+ "anyhow",
+ "async-task",
+ "image",
+ "opencv",
+ "rayon",
+ "smol",
+]
 
 [[package]]
 name = "chapter6"
