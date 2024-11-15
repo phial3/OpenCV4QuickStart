@@ -1,0 +1,11 @@
+**/*/target
+**/*/build
+**/*/debug
+**/.idea
+**/.gradle
+**/.settings
+**/.project
+**/.classpath
+**/.DS_Store
+**/.Cargo.lock
+/data/
