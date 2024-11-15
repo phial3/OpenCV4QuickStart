@@ -3,6 +3,7 @@ mod connected_components_with_stats;
 mod dilate;
 mod distance_transform;
 mod erode;
+mod morphology_app;
 
 fn main() {
     // 1. connected components
@@ -18,5 +19,8 @@ fn main() {
     // let _= distance_transform::run();
 
     // 5. erode
-    let _= erode::run();
+    // let _= erode::run();
+
+    // 6. morphology app
+    let _= morphology_app::run();
 }
