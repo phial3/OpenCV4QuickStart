@@ -55,7 +55,7 @@ pub(crate) fn run() -> Result<()> {
                 continue;
             }
             let color = colors[*label as usize];
-            result.at_mut::<Vec3b>(row * w + col)?.copy_from(&color).expect("copy_from failed");
+            result.at_mut::<Vec3b>(row * w + col)?.copy_from_slice(&color.as_slice());
         }
     }
 
