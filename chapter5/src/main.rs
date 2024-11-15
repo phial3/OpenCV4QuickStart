@@ -3,6 +3,8 @@ mod image_blur;
 mod box_filter;
 mod canny;
 mod edge;
+mod filter;
+mod gauss_noise;
 
 fn main() {
     // 1. bilateral filter
@@ -18,5 +20,11 @@ fn main() {
     // let _ = canny::run();
 
     // 5. edge detection
-    let _ = edge::run();
+    // let _ = edge::run();
+
+    // 6. filter
+    // let _ = filter::run();
+
+    // 7. gaussian noise
+    let _ = gauss_noise::run();
 }
