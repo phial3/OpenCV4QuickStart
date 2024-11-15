@@ -6,6 +6,7 @@ mod edge;
 mod filter;
 mod gauss_noise;
 mod gaussian_blur;
+mod get_deriv_kernels;
 
 fn main() {
     // 1. bilateral filter
@@ -30,5 +31,8 @@ fn main() {
     // let _ = gauss_noise::run();
 
     // 8. gaussian blur
-    let _ = gaussian_blur::run();
+    // let _ = gaussian_blur::run();
+
+    // 9. get derivative kernels
+    let _ = get_deriv_kernels::run();
 }
