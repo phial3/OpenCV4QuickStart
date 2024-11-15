@@ -7,6 +7,7 @@ mod filter;
 mod gauss_noise;
 mod gaussian_blur;
 mod get_deriv_kernels;
+mod laplacian;
 
 fn main() {
     // 1. bilateral filter
@@ -34,5 +35,8 @@ fn main() {
     // let _ = gaussian_blur::run();
 
     // 9. get derivative kernels
-    let _ = get_deriv_kernels::run();
+    // let _ = get_deriv_kernels::run();
+
+    // 10. laplacian
+    let _ = laplacian::run();
 }

@@ -23,15 +23,15 @@ pub(crate) fn run() -> Result<()> {
     let mut result4 = Mat::default();
 
     // 使用不同滤波器直径对图像进行滤波, border_type=4, BorderTypes::BORDER_DEFAULT
-    imgproc::bilateral_filter(&img1, &mut result1, 9, 50.0, 25.0 / 2.0, 4)
+    imgproc::bilateral_filter(&img1, &mut result1, 9, 50.0, 25.0 / 2.0,  opencv::core::BORDER_DEFAULT)
         .context("Bilateral filter1 failed").unwrap();
-    imgproc::bilateral_filter(&img1, &mut result2, 25, 50.0, 25.0 / 2.0, 4)
+    imgproc::bilateral_filter(&img1, &mut result2, 25, 50.0, 25.0 / 2.0,  opencv::core::BORDER_DEFAULT)
         .context("Bilateral filter2 failed").unwrap();
 
     // 使用不同标准差值对第二张图像进行滤波
-    imgproc::bilateral_filter(&img2, &mut result3, 9, 9.0, 9.0, 4)
+    imgproc::bilateral_filter(&img2, &mut result3, 9, 9.0, 9.0,  opencv::core::BORDER_DEFAULT)
         .context("Bilateral filter3 failed").unwrap();
-    imgproc::bilateral_filter(&img2, &mut result4, 9, 200.0, 200.0, 4)
+    imgproc::bilateral_filter(&img2, &mut result4, 9, 200.0, 200.0,  opencv::core::BORDER_DEFAULT)
         .context("Bilateral filter4 failed").unwrap();
 
     // 显示原始图像

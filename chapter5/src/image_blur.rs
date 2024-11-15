@@ -28,19 +28,19 @@ pub(crate) fn run() -> Result<()> {
     let mut result_9salt = Mat::default();
 
     // 调用均值滤波函数 blur 进行滤波, border_type=4, BorderTypes::BORDER_DEFAULT
-    imgproc::blur(&equal_lena, &mut result_3, Size::new(3, 3), Point::new(-1, -1), 4)
+    imgproc::blur(&equal_lena, &mut result_3, Size::new(3, 3), Point::new(-1, -1),  opencv::core::BORDER_DEFAULT)
         .context("均值滤波函数 blur1 调用失败").unwrap();
-    imgproc::blur(&equal_lena, &mut result_9, Size::new(9, 9), Point::new(-1, -1), 4)
+    imgproc::blur(&equal_lena, &mut result_9, Size::new(9, 9), Point::new(-1, -1),  opencv::core::BORDER_DEFAULT)
         .context("均值滤波函数 blur2 调用失败").unwrap();
 
-    imgproc::blur(&equal_lena_gauss, &mut result_3gauss, Size::new(3, 3), Point::new(-1, -1), 4)
+    imgproc::blur(&equal_lena_gauss, &mut result_3gauss, Size::new(3, 3), Point::new(-1, -1),  opencv::core::BORDER_DEFAULT)
         .context("均值滤波函数 blur3 调用失败").unwrap();
-    imgproc::blur(&equal_lena_gauss, &mut result_9gauss, Size::new(9, 9), Point::new(-1, -1), 4)
+    imgproc::blur(&equal_lena_gauss, &mut result_9gauss, Size::new(9, 9), Point::new(-1, -1),  opencv::core::BORDER_DEFAULT)
         .context("均值滤波函数 blur4 调用失败").unwrap();
 
-    imgproc::blur(&equal_lena_salt, &mut result_3salt, Size::new(3, 3), Point::new(-1, -1), 4)
+    imgproc::blur(&equal_lena_salt, &mut result_3salt, Size::new(3, 3), Point::new(-1, -1),  opencv::core::BORDER_DEFAULT)
         .context("均值滤波函数 blur5 调用失败").unwrap();
-    imgproc::blur(&equal_lena_salt, &mut result_9salt, Size::new(9, 9), Point::new(-1, -1), 4)
+    imgproc::blur(&equal_lena_salt, &mut result_9salt, Size::new(9, 9), Point::new(-1, -1),  opencv::core::BORDER_DEFAULT)
         .context("均值滤波函数 blur6 调用失败").unwrap();
 
     // 显示不含噪声图像

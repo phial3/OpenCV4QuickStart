@@ -44,6 +44,7 @@ pub(crate) fn run() -> Result<()> {
 
     sobel_x1.convert_to(&mut sobel_x1_reshaped, opencv::core::CV_8U, 1.0, 0.0)?;
     sobel_x1_reshaped = sobel_x1_reshaped.reshape(1, 0).unwrap().try_clone()?;
+    // scale: 1.0 表示不缩放，dtype: 指定输出矩阵的数据类型，CV_32F 表示输出类型为32位浮点数
     opencv::core::multiply(&sobel_y1, &sobel_x1_reshaped, &mut sobel_x1_final, 1.0, opencv::core::CV_32F)
         .context("Failed to multiply Sobel X1").unwrap();
 
