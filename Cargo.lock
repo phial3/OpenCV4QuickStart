@@ -379,6 +379,7 @@ dependencies = [
  "async-task",
  "image",
  "opencv",
+ "rand",
  "rayon",
  "smol",
 ]

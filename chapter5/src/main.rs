@@ -9,6 +9,7 @@ mod gaussian_blur;
 mod get_deriv_kernels;
 mod laplacian;
 mod median_blur;
+mod salt_and_pepper;
 
 fn main() {
     // 1. bilateral filter
@@ -42,5 +43,8 @@ fn main() {
     // let _ = laplacian::run();
 
     // 11. median blur
-    let _ = median_blur::run();
+    // let _ = median_blur::run();
+
+    // 12. salt and pepper
+    let _ = salt_and_pepper::run();
 }
