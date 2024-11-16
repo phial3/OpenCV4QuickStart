@@ -18,6 +18,7 @@ opencv = { version = "0.93", default-features = false, features = [
     "video",
     "videoio",
     "highgui",
+    "calib3d",
     "imgproc",
     "ximgproc",
     "imgcodecs",
