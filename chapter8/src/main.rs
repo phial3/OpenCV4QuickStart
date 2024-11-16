@@ -3,6 +3,7 @@ mod flood_fill;
 mod grab_cut;
 mod inpaint;
 mod integral;
+mod mul_spectrums;
 
 fn main() {
     // 1. dct
@@ -18,5 +19,8 @@ fn main() {
     // let _ = inpaint::run();
 
     // 5. integral image
-    let _ = integral::run();
+    // let _ = integral::run();
+
+    // 6. multiply spectrums
+    let _ = mul_spectrums::run();
 }
