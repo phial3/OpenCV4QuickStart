@@ -13,6 +13,8 @@ async-task = "4.7"
 opencv = { version = "0.93", default-features = false, features = [
     "dnn",
     "fuzzy",
+    "photo",
+    "xphoto",
     "video",
     "videoio",
     "highgui",
