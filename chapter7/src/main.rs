@@ -8,7 +8,9 @@ mod hough_circles;
 mod hough_lines;
 mod hough_lines_p;
 mod hough_lines_point_set;
-
+mod hu_moments;
+mod match_shapes;
+mod moments;
 
 fn main() {
     // 1. approx poly dp
@@ -39,5 +41,14 @@ fn main() {
     // let _ = hough_lines_p::run();
 
     // 10. hough lines point set
-    let _ = hough_lines_point_set::run();
+    // let _ = hough_lines_point_set::run();
+
+    // 11. hu moments
+    // let _ = hu_moments::run();
+
+    // 12. match shapes
+    // let _ = match_shapes::run();
+
+    // 13. moments
+    let _ = moments::run();
 }
