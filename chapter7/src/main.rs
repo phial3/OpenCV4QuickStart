@@ -11,6 +11,8 @@ mod hough_lines_point_set;
 mod hu_moments;
 mod match_shapes;
 mod moments;
+mod point_polygon_test;
+mod rect;
 
 fn main() {
     // 1. approx poly dp
@@ -50,5 +52,11 @@ fn main() {
     // let _ = match_shapes::run();
 
     // 13. moments
-    let _ = moments::run();
+    // let _ = moments::run();
+
+    // 14. point polygon
+    // let _ = point_polygon_test::run();
+
+    // 15. rect
+    let _ = rect::run();
 }
