@@ -14,8 +14,7 @@ pub(crate) fn run() -> Result<()> {
     // 读取图像
     let mut img = imgcodecs::imread(&format!("{}lena.png", BASE_PATH), imgcodecs::IMREAD_COLOR)?;
     if img.empty() {
-        println!("读取图像错误，请确认图像文件是否正确");
-        return Ok(());
+        panic!("读取图像错误，请确认图像文件是否正确");
     }
 
     // 转换为灰度图像
