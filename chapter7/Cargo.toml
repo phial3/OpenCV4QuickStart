@@ -10,6 +10,7 @@ rayon = "1.10"
 smol = "2.0"
 rand = "0.8"
 async-task = "4.7"
+zbar-rust = "0.0"
 opencv = { version = "0.93", default-features = false, features = [
     "dnn",
     "fuzzy",

@@ -13,6 +13,8 @@ mod match_shapes;
 mod moments;
 mod point_polygon_test;
 mod rect;
+mod triangle_and_circle;
+mod detect_qrcode;
 
 fn main() {
     // 1. approx poly dp
@@ -58,5 +60,11 @@ fn main() {
     // let _ = point_polygon_test::run();
 
     // 15. rect
-    let _ = rect::run();
+    // let _ = rect::run();
+
+    // 16. triangle and circle
+    // let _ = triangle_and_circle::run();
+
+    // 17. detect qrcode
+    let _ = detect_qrcode::run();
 }
