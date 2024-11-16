@@ -2,6 +2,7 @@ mod dct;
 mod flood_fill;
 mod grab_cut;
 mod inpaint;
+mod integral;
 
 fn main() {
     // 1. dct
@@ -14,5 +15,8 @@ fn main() {
     // let _ = grab_cut::run();
 
     // 4. inpaint
-    let _ = inpaint::run();
+    // let _ = inpaint::run();
+
+    // 5. integral image
+    let _ = integral::run();
 }
