@@ -6,6 +6,7 @@ mod orb;
 mod orb_match;
 mod orb_match_flann;
 mod orb_match_ransac;
+mod surf;
 
 fn main() {
     // 1. corner_harris::run()
@@ -27,8 +28,11 @@ fn main() {
     // let _ = orb_match::run();
 
     // 7. orb_match_flann::run()
-    let _ = orb_match_flann::run();
+    // let _ = orb_match_flann::run();
 
     // 8. orb_match_ransac::run()
     // let _ = orb_match_ransac::run();
+
+    // 9. surf::run()
+    let _ = surf::run();
 }
