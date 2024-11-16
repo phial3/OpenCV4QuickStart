@@ -22,8 +22,7 @@ pub(crate) fn run() -> Result<()> {
 
     let img = imgcodecs::imread(&(format!("{}coins.jpg", BASE_PATH)), imgcodecs::IMREAD_COLOR)?;
     if img.empty() {
-        println!("请确认图像文件名称是否正确");
-        return Ok(());
+        panic!("请确认图像文件名称是否正确");
     }
 
     highgui::imshow("原图", &img)?;
