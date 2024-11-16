@@ -1,6 +1,11 @@
 use anyhow::Result;
-use opencv::{prelude::*, imgproc, imgcodecs, highgui};
-use opencv::core::{Vector, Vec4b};
+use opencv::{
+    prelude::*,
+    core::{Vector, Vec4b},
+    imgproc,
+    imgcodecs,
+    highgui,
+};
 
 const BASE_PATH: &str = "../data/chapter1/";
 

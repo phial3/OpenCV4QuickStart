@@ -16,8 +16,7 @@ pub(crate) fn run() -> Result<()> {
     let img2 = imgcodecs::imread(&format!("{}inpaint2.png", BASE_PATH), imgcodecs::IMREAD_COLOR)?;
     // 检查图像是否正确加载
     if img1.empty() || img2.empty() {
-        println!("请确认图像文件名称是否正确");
-        return Ok(());
+        panic!("请确认图像文件名称是否正确");
     }
 
     // 显示原始图像
