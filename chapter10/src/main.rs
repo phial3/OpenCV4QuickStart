@@ -3,6 +3,7 @@ mod chessboard;
 mod concat;
 mod homogeneous;
 mod pnp_and_ransac;
+mod project_points;
 
 fn main() {
     // 1. calibrate_camera
@@ -18,5 +19,8 @@ fn main() {
     // let _ = homogeneous::run();
 
     // 5. pnp_and_ransac
-    let _ = pnp_and_ransac::run();
+    // let _ = pnp_and_ransac::run();
+
+    // 6. project_points
+    let _ = project_points::run();
 }
