@@ -1,5 +1,4 @@
 use anyhow::{Result, Error, Context};
-use image::open;
 use opencv::{
     prelude::*,
     core::{Mat, Point2f, Point3f, Scalar, Size, Vector, TermCriteria},
