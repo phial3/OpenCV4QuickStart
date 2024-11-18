@@ -1,5 +1,4 @@
 use anyhow::{Result, Error, Context};
-use image::open;
 use opencv::{
     prelude::*,
     core::{Mat, Point2f, Point3f, Scalar, Size, Vector, TermCriteria},
@@ -45,6 +44,12 @@ pub(crate) fn run() -> Result<()> {
         calib3d::CALIB_CB_ADAPTIVE_THRESH
     ).context("方格标定板角点检测失败").unwrap();
 
+    // FIXME:  error: (-2:Unspecified error) in function 'bool cv::findCirclesGrid(InputArray, Size, OutputArray, int, const Ptr<FeatureDetector> &, const CirclesGridFinderParameters &)'
+    //     > blobDetector must be provided or image must contains Point2f array (std::vector<Point2f>) with candidates (expected: '_image.type() == CV_32FC2'), where
+    //     >     '_image.type()' is 0 (CV_8UC1)
+    //     > must be equal to
+    //     >     'CV_32FC2' is 13 (CV_32FC2)
+    //      (code: StsError, -2)
     // 计算圆形标定板检点
    unsafe {
        calib3d::find_circles_grid_1(
