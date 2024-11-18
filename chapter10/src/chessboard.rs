@@ -9,7 +9,6 @@ use opencv::{
     calib3d,
     features2d::{SimpleBlobDetector, SimpleBlobDetector_Params, Feature2D},
 };
-use opencv::core::PtrExtern;
 
 const BASE_PATH: &str = "../data/chapter10/";
 
