@@ -16,8 +16,7 @@ pub(crate) fn run() -> Result<()> {
     let img1 = imgcodecs::imread(&format!("{}box.png", BASE_PATH), imgcodecs::IMREAD_COLOR)?;
     let img2 = imgcodecs::imread(&format!("{}box_in_scene.png", BASE_PATH), imgcodecs::IMREAD_COLOR)?;
     if img1.empty() || img2.empty() {
-        println!("读取图像错误，请确认图像文件是否正确");
-        return Ok(());
+        panic!("读取图像错误，请确认图像文件是否正确");
     }
 
     // 提取ORB特征点

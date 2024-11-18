@@ -333,6 +333,15 @@ dependencies = [
 [[package]]
 name = "chapter10"
 version = "0.1.0"
+dependencies = [
+ "anyhow",
+ "async-task",
+ "image",
+ "opencv",
+ "rand",
+ "rayon",
+ "smol",
+]
 
 [[package]]
 name = "chapter11"
