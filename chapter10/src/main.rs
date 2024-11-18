@@ -4,6 +4,8 @@ mod concat;
 mod homogeneous;
 mod pnp_and_ransac;
 mod project_points;
+mod stereo_calibrate;
+mod stereo_rectify;
 
 fn main() {
     // 1. calibrate_camera
@@ -22,5 +24,11 @@ fn main() {
     // let _ = pnp_and_ransac::run();
 
     // 6. project_points
-    let _ = project_points::run();
+    // let _ = project_points::run();
+
+    // 7. stereo_calibrate
+    // let _ = stereo_calibrate::run();
+
+    // 8. stereo_rectify
+    let _ = stereo_rectify::run();
 }
