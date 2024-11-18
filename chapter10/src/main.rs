@@ -6,6 +6,7 @@ mod pnp_and_ransac;
 mod project_points;
 mod stereo_calibrate;
 mod stereo_rectify;
+mod undistortion;
 
 fn main() {
     // 1. calibrate_camera
@@ -30,5 +31,8 @@ fn main() {
     // let _ = stereo_calibrate::run();
 
     // 8. stereo_rectify
-    let _ = stereo_rectify::run();
+    // let _ = stereo_rectify::run();
+
+    // 9. undistortion
+    let _ = undistortion::run();
 }
