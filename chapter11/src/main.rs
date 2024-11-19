@@ -1,7 +1,7 @@
 mod absdiff;
 mod calc_optical_flow_farneback;
 mod calc_optical_flow_pyr_lk;
-
+mod cam_shift;
 
 fn main() {
     // 1. absdiff
@@ -11,5 +11,8 @@ fn main() {
     // let _ = calc_optical_flow_farneback::run();
 
     // 3. calc_optical_flow_pyr_lk
-    let _ = calc_optical_flow_pyr_lk::run();
+    // let _ = calc_optical_flow_pyr_lk::run();
+
+    // 4. cam_shift
+    let _ = cam_shift::run();
 }
