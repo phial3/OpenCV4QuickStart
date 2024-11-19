@@ -19,8 +19,7 @@ pub(crate) fn run() -> Result<()> {
     // 读取第一帧
     let mut prev_frame = Mat::default();
     if !capture.read(&mut prev_frame)? {
-        println!("请确认视频文件名称是否正确");
-        return Ok(());
+        panic!("请确认视频文件名称是否正确");
     }
 
     // 转换为灰度图
