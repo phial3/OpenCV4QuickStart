@@ -4,3 +4,28 @@ version = "0.1.0"
 edition = "2021"
 
 [dependencies]
+anyhow = "1.0"
+image = "0.25"
+rayon = "1.10"
+smol = "2.0"
+rand = "0.8"
+async-task = "4.7"
+opencv = { version = "0.93", default-features = false, features = [
+    "dnn",
+    "fuzzy",
+    "photo",
+    "xphoto",
+    "video",
+    "videoio",
+    "highgui",
+    "calib3d",
+    "imgproc",
+    "ximgproc",
+    "imgcodecs",
+    "features2d",
+    "objdetect",
+    "xobjdetect",
+    "tracking",
+    "stitching",
+    "clang-runtime",
+] }

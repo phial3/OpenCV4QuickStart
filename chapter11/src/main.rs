@@ -1,3 +1,7 @@
+mod absdiff;
+
+
 fn main() {
-    println!("Hello, world!");
+    // 1. absdiff
+    let _ = absdiff::run();
 }
