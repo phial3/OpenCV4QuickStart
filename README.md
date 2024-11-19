@@ -2,6 +2,8 @@
 
     基于冯振版的《OpenCV4快速入门》编写的代码，项目中的代码均本地编译调试运行。
 > C++ 版本示例可参考这里：https://github.com/lining1111/OpenCV4QuickStartGuide
+> 
+> 也可以借鉴：https://github.com/kyunghyunHan/open_cv
 
 ## chapter1
 
